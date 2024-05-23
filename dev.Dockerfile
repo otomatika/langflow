@@ -12,6 +12,8 @@ COPY poetry.lock pyproject.toml ./
 # Copy the rest of the application codes
 COPY ./ ./
 
+EXPOSE 7860
+
 # Install dependencies
 RUN poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi
 
